@@ -1,0 +1,20 @@
+.design-for-grid-section{
+   display: grid;
+   grid-template-columns: repeat(10,auto);
+}
+.design-for-grid-div{
+    height: 50vh;
+    background-color:white;
+    transition: background-color 1s;
+    
+}
+#design-for-grid-heading{
+    font-family: 'Montserrat';
+    font-size: 5em;
+    position: absolute;
+    margin: auto;
+    text-align: center;
+    top: 40%;
+    opacity: 0;
+    z-index: 2;
+}

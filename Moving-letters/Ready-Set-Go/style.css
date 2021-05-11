@@ -1,0 +1,24 @@
+/* :root{font-size: 4rem;}
+@media(min-width: 300px){:root {font-size: 1rem;}}
+@media(min-width: 600px){:root {font-size: 1.5rem;}}
+@media(min-width: 900px){:root {font-size: 2rem;}}
+@media(min-width: 1200px){:root {font-size: 4rem;}} */
+
+
+.textWrapper{
+    padding: initial;
+    position: relative;
+    font-weight: 900;
+    font-size: 2rem;
+    font-family: "Inter", "Source Sans Pro","Helvetica Neue", Arial, sans-serif;
+}
+
+.textWrapper .text{ 
+    /* position: absolute; */
+    position: absolute;
+    margin: auto;
+    left: 0;
+    top: 0.3em;
+    right: 0;
+    /* opacity: 0;  */
+}

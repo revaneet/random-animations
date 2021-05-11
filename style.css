@@ -1,0 +1,67 @@
+body{
+    padding: 0;
+    margin: 0;
+    width: 100%;
+    height: 100%;
+}
+#color-gradient-timeline{
+    margin: auto;
+    background-color: #25275a;
+    width: 100%;
+    height: 100%;
+}
+#design-for-grid{
+    text-align: center;
+}
+#great-thinkers{
+    background-color: #284F59;
+    width: 100%;
+    height: 100%;
+    padding: 0;
+    margin: 0;
+    color: white;
+    font-size: 2rem;
+    font-family: "Inter", "Source Sans Pro","Helvetica Neue", Arial, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+#ready-set-go{
+    background-color: #1A1A1A;
+    width: 100%;
+    height: 100%;
+    /* padding: 0;
+    margin: 0; */
+    color: white;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+#sunny-mornings{
+    background-color: #E8C3B9;
+    color: white;
+    width: 100%;
+    height: 100%;
+    padding: 0;
+    margin: 0;
+    font-size: 2rem;
+    font-weight: 900;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+}
+#thursday{
+    background-color: #9BA5B5;  
+    width: 100%;
+    height: 100%; 
+    margin:0;
+    padding: 0;
+    display: flex;
+    justify-content: center; 
+    align-items: center; 
+}

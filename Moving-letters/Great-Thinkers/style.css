@@ -1,0 +1,16 @@
+/* :root{font-size: 2rem;}
+@media(min-width: 300px){:root {font-size: .8rem;}}
+@media(min-width: 600px){:root {font-size: 1.2rem;}}
+@media(min-width: 900px){:root {font-size: 1.5rem;}}
+@media(min-width: 1200px){:root {font-size: 2rem;}} */
+
+.heading{
+    font-weight: 900;
+    line-height: 1rem;
+}
+.letters{
+    display: inline-block;
+}
+.letter{
+    display: inline-block;
+}
