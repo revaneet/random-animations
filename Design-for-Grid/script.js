@@ -1,10 +1,10 @@
-window.onload = function(){
+function designForGridAnimation(){
 
     var timeline = anime.timeline({
         easing: 'easeOutExpo',
         duration: 1000,
-        // loop: true,
-        // direction: 'alernate'
+        loop: true,
+        direction: 'alernate'
     });
 
     timeline.add({
@@ -18,13 +18,13 @@ window.onload = function(){
         width: '90%',
         backgroundColor: 'rgb(235, 235, 255)'
     })
-    anime({
-        targets: '#design-for-grid-heading',
-        easing: 'easeOutExpo',
-        top: '20%',
-        opacity: 1,
-        duration: 4000,
-    },'-=2000');
+    // anime({
+    //     targets: '#design-for-grid-heading',
+    //     easing: 'easeOutExpo',
+    //     top: '20%',
+    //     opacity: 1,
+    //     duration: 4000,
+    // },'-=2000');
 
     var squash = anime({
         targets: '.design-for-grid-section',

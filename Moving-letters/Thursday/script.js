@@ -1,4 +1,4 @@
-window.onload = function(){
+function thursdayAnimation(){
     var textWrapper = document.querySelector('.thursday-heading .thursday-letters')
     textWrapper.innerHTML = textWrapper.textContent.replace(/\S/g, "<span class='thursday-letter'>$&</span>");
 

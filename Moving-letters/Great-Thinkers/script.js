@@ -1,4 +1,4 @@
-window.onload = function(){
+function greatThinkersAnimation(){
     var textWrapper = document.querySelector('.great-thinkers-letters');
     textWrapper.innerHTML = textWrapper.textContent.replace(/\S/g , "<span class='great-thinkers-letter'>$&</span>");
 

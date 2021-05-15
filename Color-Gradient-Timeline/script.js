@@ -1,4 +1,4 @@
-window.onload = function(){
+function colorGradientTimelineAnimation(){
     anime({
         targets: '.box',
         translateY: [150,40],

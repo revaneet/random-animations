@@ -1,4 +1,4 @@
-window.onload = function(){
+function sunnyMorningsAnimation(){
     var letters = document.querySelector('.sunny-mornings-letters');
     letters.innerHTML = letters.textContent.replace(/\S/g, "<span class='sunny-mornings-letter'>$&</span>");
 
