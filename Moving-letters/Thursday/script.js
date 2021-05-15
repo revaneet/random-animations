@@ -1,13 +1,13 @@
 window.onload = function(){
-    var textWrapper = document.querySelector('.heading .letters')
-    textWrapper.innerHTML = textWrapper.textContent.replace(/\S/g, "<span class='letter'>$&</span>");
+    var textWrapper = document.querySelector('.thursday-heading .thursday-letters')
+    textWrapper.innerHTML = textWrapper.textContent.replace(/\S/g, "<span class='thursday-letter'>$&</span>");
 
     var timeline = anime.timeline({
         loop:true
     })
 
     timeline.add({
-        targets: '.letter',
+        targets: '.thursday-letter',
         opacity:[0,1],
         easing: 'easeOutExpo',
         duration: 900,

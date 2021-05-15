@@ -1,13 +1,13 @@
 window.onload = function(){
-    var textWrapper = document.querySelector('.letters');
-    textWrapper.innerHTML = textWrapper.textContent.replace(/\S/g , "<span class='letter'>$&</span>");
+    var textWrapper = document.querySelector('.great-thinkers-letters');
+    textWrapper.innerHTML = textWrapper.textContent.replace(/\S/g , "<span class='great-thinkers-letter'>$&</span>");
 
     var timeline = anime.timeline({
         loop: true
     })
 
     timeline.add({
-        targets: '.letter',
+        targets: '.great-thinkers-letter',
         duration: 3000,
         delay: (el , i) => 150*i,
         easing: 'easeInOutQuad',
@@ -15,7 +15,7 @@ window.onload = function(){
         
     })
     .add({
-        targets: '.letters',
+        targets: '.great-thinkers-letters',
         duration: 1000,
         delay: 1000,
         opacity: 0,
