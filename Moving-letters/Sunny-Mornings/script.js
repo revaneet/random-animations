@@ -1,11 +1,12 @@
+let sunnyMorningsAnime;
 function sunnyMorningsAnimation(){
     var letters = document.querySelector('.sunny-mornings-letters');
+    var letter = document.querySelector('.sunny-mornings-letter');
     letters.innerHTML = letters.textContent.replace(/\S/g, "<span class='sunny-mornings-letter'>$&</span>");
 
-    var timeline = anime.timeline({
+    sunnyMorningsAnime = anime.timeline({
         loop: true
-    })
-    timeline.add({
+    }).add({
         targets: ' .sunny-mornings-letter',
         scale: [4,1],
         opacity: [0,1],

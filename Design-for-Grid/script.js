@@ -1,19 +1,17 @@
+let designForGridAnime;
 function designForGridAnimation(){
 
-    var timeline = anime.timeline({
+    designForGridAnime = anime.timeline({
         easing: 'easeOutExpo',
         duration: 1000,
         loop: true,
         direction: 'alernate'
-    });
-
-    timeline.add({
+    }).add({
         targets: '.design-for-grid-div',
         width: '100%',
         backgroundColor: 'rgb(197, 197, 255)',
         delay: (el , i , t) => i*100       
-    })
-    .add({
+    }).add({
         targets: '.design-for-grid-div',
         width: '90%',
         backgroundColor: 'rgb(235, 235, 255)'

@@ -6,38 +6,52 @@ $(function(){
     $("#sunny-mornings").load("/Moving-letters/Sunny-Mornings/index.html"); 
     $("#thursday").load("/Moving-letters/Thursday/index.html"); 
     
+    function getTargets(animation) {
+        return animation.children.reduce(
+          (all, one) => all.concat(getTargets(one)),
+          animation.animatables.map((a) => a.target)
+        )
+      }
+    function pauseAnimation(animation)
+    {
+        if(animation)
+        {
+            // getTargets(animation).forEach(anime.remove)
+            animation.pause();
+        }
+    }
+    function isVisible(element)
+    {
+        var pageTop = $(window).scrollTop();
+        var pageBottom = pageTop + $(window).height();
+        var elementTop = $(element).offset().top;
+        var elementBottom = elementTop + $(element).height();
+
+        return ((pageTop <= elementTop) && (pageBottom >= elementBottom));
+    }
     // -----------------------------------scroll-section-1-----------------------------------
     $('.scroll-main-container').scroll(function() {
-        var hT = $('#scroll-section-1').offset().top,
-            hH = $('#scroll-section-1').outerHeight(),
-            wH = $(window).height(),
-            wS = $(this).scrollTop();
-        if (wS >= (hT+hH-wH)){            
+        if (isVisible('#scroll-section-1')){ 
             colorGradientTimelineAnimation();
-            designForGridAnimation();
+            // designForGridAnimation();
         }
-    });
-
-     // -----------------------------------scroll-section-2-----------------------------------
-    $('.scroll-main-container').scroll(function() {
-        var hT = $('#scroll-section-2').offset().top,
-            hH = $('#scroll-section-2').outerHeight(),
-            wH = $(window).height(),
-            wS = $(this).scrollTop();
-        if (wS >= (hT+hH-wH)){
-            greatThinkersAnimation()
+        else{
+            pauseAnimation(colorGradientTimelineAnime);
+            // pauseAnimation(designForGridAnime);
         }
-    });
-
-    // -----------------------------------scroll-section-3-----------------------------------
-    $('.scroll-main-container').scroll(function() {
-        var hT = $('#scroll-section-3').offset().top,
-            hH = $('#scroll-section-3').outerHeight(),
-            wH = $(window).height(),
-            wS = $(this).scrollTop();
-        if (wS >= (hT+hH-wH)){
+        if (isVisible('#scroll-section-2')){
+            greatThinkersAnimation();
+        }
+        else{
+            pauseAnimation(greatThinkersAnime);
+        }
+        if (isVisible('#scroll-section-3')){
             sunnyMorningsAnimation();
             thursdayAnimation();
+        }
+        else{
+            pauseAnimation(sunnyMorningsAnime);
+            pauseAnimation(thursdayAnime);
         }
     });
 

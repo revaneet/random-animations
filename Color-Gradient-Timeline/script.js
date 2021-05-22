@@ -1,5 +1,6 @@
+let colorGradientTimelineAnime = anime();
 function colorGradientTimelineAnimation(){
-    anime({
+    colorGradientTimelineAnime = anime({
         targets: '.box',
         translateY: [150,40],
         backgroundColor: {
