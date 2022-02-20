@@ -6,6 +6,13 @@ $(function(){
     $("#sunny-mornings").load("/Animations/Moving-letters/Sunny-Mornings/index.html"); 
     $("#thursday").load("/Animations/Moving-letters/Thursday/index.html");
 
+    $(document).ready(() => {
+        new ScrollHandler('intro-section')
+        new ScrollHandler('scroll-section-1')
+        new ScrollHandler('scroll-section-2')
+        new ScrollHandler('scroll-section-3')
+    })
+
     function getTargets(animation) {
         return animation.children.reduce(
           (all, one) => all.concat(getTargets(one)),
