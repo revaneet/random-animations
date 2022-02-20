@@ -34,8 +34,6 @@ $(function(){
         var elementTop = $(element).offset().top;
         var elementBottom = elementTop + $(element).height();
 
-        console.log(pageTop , pageBottom , elementTop , elementBottom)
-
         return ((pageTop <= elementTop) && (pageBottom >= elementBottom));
     }
     // -----------------------------------scroll-section----------------------------------
