@@ -1,10 +1,10 @@
 $(function(){
-    $("#color-gradient-timeline").load("/Color-Gradient-Timeline/index.html"); 
-    $("#design-for-grid").load("/Design-for-Grid/index.html"); 
-    $("#great-thinkers").load("/Moving-letters/Great-Thinkers/index.html"); 
-    $("#hello-world").load("/Moving-letters/Hello-World/index.html"); 
-    $("#sunny-mornings").load("/Moving-letters/Sunny-Mornings/index.html"); 
-    $("#thursday").load("/Moving-letters/Thursday/index.html");
+    $("#color-gradient-timeline").load("/Animations/Color-Gradient-Timeline/index.html"); 
+    $("#design-for-grid").load("/Animations/Design-for-Grid/index.html"); 
+    $("#great-thinkers").load("/Animations/Moving-letters/Great-Thinkers/index.html"); 
+    $("#hello-world").load("/Animations/Moving-letters/Hello-World/index.html"); 
+    $("#sunny-mornings").load("/Animations/Moving-letters/Sunny-Mornings/index.html"); 
+    $("#thursday").load("/Animations/Moving-letters/Thursday/index.html");
 
     function getTargets(animation) {
         return animation.children.reduce(
@@ -36,11 +36,10 @@ $(function(){
         if(isVisible('#intro-section')) {
         }
         if (isVisible('#scroll-section-1')){ 
-            console.log("section 1 visible")
             colorGradientTimelineAnimation();
             designForGridAnimation();
         }
-        else{console.log("section 1 else ")
+        else{
             pauseAnimation(colorGradientTimelineAnime);
             pauseAnimation(designForGridAnime);
         }
