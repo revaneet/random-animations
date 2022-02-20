@@ -2,10 +2,10 @@ $(function(){
     $("#color-gradient-timeline").load("/Color-Gradient-Timeline/index.html"); 
     $("#design-for-grid").load("/Design-for-Grid/index.html"); 
     $("#great-thinkers").load("/Moving-letters/Great-Thinkers/index.html"); 
-    // $("#ready-set-go").load("/Moving-letters/Ready-Set-Go/index.html"); 
+    $("#hello-world").load("/Moving-letters/Hello-World/index.html"); 
     $("#sunny-mornings").load("/Moving-letters/Sunny-Mornings/index.html"); 
-    $("#thursday").load("/Moving-letters/Thursday/index.html"); 
-    
+    $("#thursday").load("/Moving-letters/Thursday/index.html");
+
     function getTargets(animation) {
         return animation.children.reduce(
           (all, one) => all.concat(getTargets(one)),
@@ -16,7 +16,7 @@ $(function(){
     {
         if(animation)
         {
-            // getTargets(animation).forEach(anime.remove)
+            getTargets(animation).forEach(anime.remove)
             animation.pause();
         }
     }
@@ -27,23 +27,30 @@ $(function(){
         var elementTop = $(element).offset().top;
         var elementBottom = elementTop + $(element).height();
 
+        console.log(pageTop , pageBottom , elementTop , elementBottom)
+
         return ((pageTop <= elementTop) && (pageBottom >= elementBottom));
     }
-    // -----------------------------------scroll-section-1-----------------------------------
+    // -----------------------------------scroll-section----------------------------------
     $('.scroll-main-container').scroll(function() {
-        if (isVisible('#scroll-section-1')){ 
-            colorGradientTimelineAnimation();
-            // designForGridAnimation();
+        if(isVisible('#intro-section')) {
         }
-        else{
+        if (isVisible('#scroll-section-1')){ 
+            console.log("section 1 visible")
+            colorGradientTimelineAnimation();
+            designForGridAnimation();
+        }
+        else{console.log("section 1 else ")
             pauseAnimation(colorGradientTimelineAnime);
-            // pauseAnimation(designForGridAnime);
+            pauseAnimation(designForGridAnime);
         }
         if (isVisible('#scroll-section-2')){
             greatThinkersAnimation();
+            helloWorldAnimation()
         }
         else{
             pauseAnimation(greatThinkersAnime);
+            pauseAnimation(helloWorldAnime)
         }
         if (isVisible('#scroll-section-3')){
             sunnyMorningsAnimation();
