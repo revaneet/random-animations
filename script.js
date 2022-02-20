@@ -1,10 +1,10 @@
 $(function(){
-    $("#color-gradient-timeline").load("/Animations/Color-Gradient-Timeline/index.html"); 
-    $("#design-for-grid").load("/Animations/Design-for-Grid/index.html"); 
-    $("#great-thinkers").load("/Animations/Moving-letters/Great-Thinkers/index.html"); 
-    $("#hello-world").load("/Animations/Moving-letters/Hello-World/index.html"); 
-    $("#sunny-mornings").load("/Animations/Moving-letters/Sunny-Mornings/index.html"); 
-    $("#thursday").load("/Animations/Moving-letters/Thursday/index.html");
+    $("#color-gradient-timeline").load("/random-animations/Animations/Color-Gradient-Timeline/index.html"); 
+    $("#design-for-grid").load("/random-animations/Animations/Design-for-Grid/index.html"); 
+    $("#great-thinkers").load("/random-animations/Animations/Moving-letters/Great-Thinkers/index.html"); 
+    $("#hello-world").load("/random-animations/Animations/Moving-letters/Hello-World/index.html"); 
+    $("#sunny-mornings").load("/random-animations/Animations/Moving-letters/Sunny-Mornings/index.html"); 
+    $("#thursday").load("/random-animations/Animations/Moving-letters/Thursday/index.html");
 
     $(document).ready(() => {
         new ScrollHandler('intro-section')
